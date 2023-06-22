@@ -41,7 +41,7 @@ class Calculator {
     fun enterCalculate() {
         val currentCalculate: CalculatorModel = calculateFlow.value
 
-        if (currentCalculate.numberSecond.lastOrNull() != '.') return
+        if (currentCalculate.numberSecond.lastOrNull() == '.') return
 
         val numberFirst = currentCalculate.numberFirst.toDoubleOrNull() ?: return
         val numberSecond = currentCalculate.numberSecond.toDoubleOrNull() ?: return
