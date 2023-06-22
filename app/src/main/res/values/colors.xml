@@ -4,10 +4,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="light_blue">#E7F8FF</color>
-    <color name="dark_blue">#4D050505</color>
+    <color name="dark_blue">#25050505</color>
 
-    <color name="dark_background_color">#252628</color>
-    <color name="light_background_color">#FFFFFFFF</color>
+
 
 
 </resources>

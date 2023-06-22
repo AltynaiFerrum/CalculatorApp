@@ -8,6 +8,10 @@
     <style name="Theme.CalculatorApp" parent="Base.Theme.CalculatorApp">
         <item name="mainBackgroundColor">@color/light_background_color</item>
         <item name="ButtonBackgroundColor">@color/light_blue</item>
+        <item name="TextColor">@color/black</item>
+
+        <item name="theme_icon">@drawable/light</item>
+
 
         <item name="android:statusBarColor">@color/light_background_color</item>
         <item name="calculatorBackgroundColor">@drawable/light_calculator_background</item>

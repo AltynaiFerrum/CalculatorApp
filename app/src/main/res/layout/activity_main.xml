@@ -7,11 +7,26 @@
     android:background="?attr/mainBackgroundColor"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        tools:text="2 + 2 = 5"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="539dp"
-        app:cardCornerRadius="32dp"
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="507dp"
         android:layout_marginBottom="-32dp"
+        app:cardCornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -20,13 +35,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="?attr/calculatorBackgroundColor"/>
+            android:src="?attr/calculatorBackgroundColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="102dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="102dp"
             android:layout_marginBottom="48dp"
             android:orientation="vertical">
 
@@ -34,43 +49,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="16dp"
+                app:cardBackgroundColor="?attr/ButtonBackgroundColor"
                 app:cardCornerRadius="40dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="?attr/ButtonBackgroundColor">
+                app:cardElevation="0dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
+                        android:id="@+id/ac_button"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:textAlignment="center"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
                         android:text="AC"
-                        android:textSize="26sp"/>
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
 
                     <TextView
+                        android:id="@+id/del_button"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_semibold"
                         android:gravity="center"
+                        android:text="Del"
                         android:textAlignment="center"
-                        android:text="+/-"
-                        android:textSize="26sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textAlignment="center"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="%"
-                        android:textSize="26sp"/>
+                        android:textSize="26sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -83,199 +92,162 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:weightSum="3"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                >
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/one_button"
                     android:text="1"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/two_button"
                     android:text="2"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
+
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/three_button"
                     android:text="3"
-                    android:layout_weight="3"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle">
+
 
 
                 </com.google.android.material.button.MaterialButton>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:weightSum="3"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                >
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/four_button"
                     android:text="4"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/five_button"
                     android:text="5"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/six_button"
                     android:text="6"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
-
+                    style="@style/CalculatorButtonStyle">
 
                 </com.google.android.material.button.MaterialButton>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:weightSum="3"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                >
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/seven_button"
                     android:text="7"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/eight_button"
                     android:text="8"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/nine_button"
                     android:text="9"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
-
+                    style="@style/CalculatorButtonStyle">
 
                 </com.google.android.material.button.MaterialButton>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:weightSum="3"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                >
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
-                    android:text="."
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
+                    android:id="@+id/zero_button"
                     android:text="0"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    style="@style/CalculatorButtonStyle"
+                    android:layout_weight="3"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_marginHorizontal="14dp"
-                    android:text="00"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:backgroundTint="?attr/ButtonBackgroundColor">
+                    android:id="@+id/dot_button"
+                    android:text="."
+                    style="@style/CalculatorButtonStyle"/>
 
-
-                </com.google.android.material.button.MaterialButton>
             </LinearLayout>
         </LinearLayout>
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="70dp"
-            android:layout_height="match_parent"
+            android:layout_height="420dp"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="48dp"
-            app:cardElevation="0dp"
+            android:layout_marginBottom="64dp"
+            app:cardBackgroundColor="?attr/ButtonBackgroundColor"
             app:cardCornerRadius="40dp"
-            app:cardBackgroundColor="?attr/ButtonBackgroundColor">
+            app:cardElevation="0dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="70dp"
-                android:weightSum="4"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:weightSum="4">
 
+                <TextView
+                    android:id="@+id/divide_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="÷"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
 
+                <TextView
+                    android:id="@+id/multiply_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="x"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/minus_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/plus_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
 
 
             </LinearLayout>
@@ -283,23 +255,43 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                app:cardElevation="32dp"
-                app:cardCornerRadius="100dp"
                 android:layout_gravity="bottom"
-              />
+                app:cardCornerRadius="100dp"
+                app:cardElevation="40dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="="
-                android:textSize="26sp"/>
+                <TextView
+                    android:id="@+id/equal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="="
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
 
+            </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/theme_icon"
+        android:layout_width="122dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="?attr/theme_icon"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

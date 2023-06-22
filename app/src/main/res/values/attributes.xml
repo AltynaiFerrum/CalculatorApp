@@ -6,5 +6,10 @@
 
     <attr name="mainBackgroundColor" format ="reference|color"/>
     <attr name="ButtonBackgroundColor" format ="reference|color"/>
+
+    <attr name="theme_icon" format ="reference"/>
+
+    <attr name="TextColor" format ="reference|color"/>
     <attr name="calculatorBackgroundColor" format ="reference|color"/>
+
 </resources>
